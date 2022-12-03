@@ -1,5 +1,10 @@
-# notification-service
-Сервис разработан на django rest framework с celery, flower, redis, pytest, swagger
+### notification-service
+Стэк проекта:
+- Python 3.9
+- Django 4.1.3
+- DRF 3.14.0
+- PostgreSQl 15.0
+- Docker 4.14
 
 
 ## Установка и запуск
@@ -7,22 +12,26 @@
 1. Склонировать репозиторий с Github:
 
 ````
-git clone git@github.com:savabush/mailing_drf.git
+git clone git@github.com:Sapik-pyt/notification-service.git
 ````
 2. Перейти в директорию проекта
-
+/notification-service
+````
+cd notification-service/
+````
 3. Создать виртуальное окружение:
 
 ````
-python -m venv venv
+python -3.9 -m venv venv
 ````
 
 4. Активировать окружение: 
 
 ````
-source \venv\bin\activate
+source \venv\Scripts\activate
 ````
-5. Файл .env.example переименовать в .env и изменить данные в нем на подходящие вам 
+5. Файл .env.foractivate переименовать в .env
+Заполнить все недостающие поля
 6. Установка зависимостей:
 
 ```
@@ -38,15 +47,6 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
-9. Запустить celery
-```
-celery -A mailing worker -l info -P solo
-```
-10. Запустить flower
-
-```
-celery -A mailing flower --port=5555
-```
 ***
 ### Запуск тестов
 ``` 
@@ -58,7 +58,7 @@ pytest
 
 1. Склонировать репозиторий с Github
 ```
-git clone git@github.com:savabush/mailing_drf.git
+git clone git@github.com:Sapik-pyt/notification-service.git
 ```
 2. Перейти в директорию проекта
 3. Файл .env.example переименовать в .env и изменить данные в нем на подходящие вам 
